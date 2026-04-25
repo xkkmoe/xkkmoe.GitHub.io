@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 针对移动设备优化的 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>临时停靠 · 请多关照</title>
+    <style>
+        /* --- 基础重置 --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            /* 使用系统级无衬线字体，保证不同设备上的简约观感 */
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            /* 居中布局 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* --- 卡片容器 --- */
+        .container {
+            background-color: #ffffff;
+            width: 88%;
+            max-width: 380px; /* 适配大屏手机及平板 */
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            text-align: center;
+        }
+
+        /* --- 顶部车辆图标 --- */
+        .icon-wrapper {
+            width: 64px;
+            height: 64px;
+            background-color: #f0f7ff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 24px;
+        }
+        .icon-wrapper svg {
+            width: 32px;
+            height: 32px;
+            fill: #007AFF; /* 苹果蓝，视觉焦点 */
+        }
+
+        /* --- 文本样式 --- */
+        h1 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+        p {
+            font-size: 15px;
+            color: #737373;
+            margin-bottom: 35px;
+        }
+
+        /* --- 拨号按钮样式 --- */
+        .call-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: #07c160; /* 微信绿，代表安全与拨通 */
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px 0;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            box-shadow: 0 6px 16px rgba(7, 193, 96, 0.25);
+        }
+        /* 按钮点击动效 */
+        .call-btn:active {
+            transform: scale(0.96);
+            opacity: 0.9;
+        }
+        .call-btn svg {
+            width: 22px;
+            height: 22px;
+            margin-right: 8px;
+            fill: currentColor;
+        }
+
+        /* --- 底部致谢语 --- */
+        .footer {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #a3a3a3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 简约汽车图标 -->
+    <div class="icon-wrapper">
+        <svg viewBox="0 0 24 24">
+            <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5z"/>
+            <circle cx="7.5" cy="14.5" r="1.5"/>
+            <circle cx="16.5" cy="14.5" r="1.5"/>
+        </svg>
+    </div>
+    
+    <h1>临时停靠，请多关照</h1>
+    <p>如果我的车辆阻挡了您的去路<br>请点击下方按钮，我将马上赶到</p>
+    
+    <!-- 核心功能：点击直拨车主电话 -->
+    <a href="tel:13227744233" class="call-btn">
+        <svg viewBox="0 0 24 24">
+            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+        </svg>
+        呼叫车主
+    </a>
+    
+    <div class="footer">
+        感谢您的包容与理解
+    </div>
+</div>
+
+</body>
+</html>
